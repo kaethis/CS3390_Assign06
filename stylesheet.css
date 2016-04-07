@@ -1,0 +1,602 @@
+<!--
+        -----------------------------------------------------------------
+                    _          _                         _      __   __
+                   /_\   _____(_)__ _ _ _  _ __  ___ _ _| |_   /  \ / /
+                  / _ \ (_-<_-< / _` | ' \| '  \/ -_) ' \  _| | () / _ \
+                 /_/ \_\/__/__/_\__, |_||_|_|_|_\___|_||_\__|  \__/\___/
+                                |___/
+
+        -----------------------------------------------------------------
+          Author:         Matt W. Martin, 4374851
+                          kaethis@tasmantis.net
+
+          Project:        CS3990, Assignment 06
+                          PHP & JavaScript
+
+          Date Issued:    14-Mar-2016
+          Date Archived:  XX-XXX-2016
+
+          File:           stylesheet.css
+-->
+
+@font-face{
+
+	font-family: "Bulletto Killa";
+	src: url('resources/fonts/bulletto-killa/BullettoKilla.ttf');
+}
+
+@font-face{
+
+	font-family: "Betty Noir";
+	src: url('resources/fonts/betty-noir/BettyNoir.ttf');
+}
+
+@font-face{
+
+	font-family: "Parklane";
+	src: url('resources/fonts/parklane/ParkLaneNF.ttf');
+}
+
+body{
+
+	background-color: #171925;
+	color: #000000;
+	font-family: Helvetica;
+	font-weight: lighter;
+}
+
+header{
+
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+header > a > img#logoA{
+
+	height: 687px;
+	width: 781px;
+}
+
+header > a > img#logoB{
+
+	height: 287px;
+	width: 921px;
+}
+
+button, input.submit{
+
+	background-color: #4AA5E3;
+	color: #FFFFFF;
+	width: 240px;
+	height: 44px;
+	font-family: "Bulletto Killa";
+	font-style: italic;
+	font-size: large;
+	border: 1px solid #808080;
+	margin-bottom: 15px;
+}
+
+button:hover{
+
+	background-color: #0D82D5;
+}
+
+button:disabled{
+
+	background-color: #4AA5E3;
+}
+
+button:disabled, input:disabled, select:disabled{
+
+	opacity: 0.5;
+}
+
+button:focus, input:focus, select:focus{
+
+	outline: none;
+}
+
+
+ul.navbar{
+
+	background: linear-gradient(#4B3E48, #4B3E48, #372B35);
+	box-shadow: 8px 8px 5px rgba(0, 0, 0, .3);
+	border: 3px solid #FEFEFC;
+	border-radius: 20px;
+	width: 800px;
+	margin: auto;
+	margin-bottom: 25px;
+	padding: 0;
+	overflow: hidden;
+	list-style-type: none;
+}
+
+ul.navbar > li{
+
+	float: left;
+	font-family: "Bulletto Killa";
+	font-weight: normal;
+	font-size: larger;
+	font-style: italic;
+	text-align: center;
+}
+
+ul.navbar > li:hover{
+
+	background-color: #808080;
+}
+
+ul.navbar > li#selected{
+
+	background-color: #635760;
+}
+
+
+ul.navbar > li#cart{
+
+	background-color: #4AA5E3;
+	float: right;
+}
+
+ul.navbar > li#cart:hover{
+
+	background-color: #0D82D5;
+}
+
+ul.navbar > li > a{
+
+	display: block;
+	color: #FEFEFC;
+	text-align: center;
+	padding: 10px 25px;
+	text-decoration: none;
+}
+
+ul.navbar > li#cart > a > img{
+
+	vertical-align: bottom;
+}
+
+div.modal{
+
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+}
+
+div.modal > div.container{
+
+	position: relative;
+}
+
+div.modal > div.container#receiptcon{
+
+	width: 500px;
+	top: 150px;
+}
+
+div.modal > div.container > div.section{
+
+	display: inline-block;
+	width: 92%;
+	border-radius: 5px;
+	border: 1px solid #808080;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+}
+
+div.modal > div.container > div.section#receipt{
+
+	background-image: url('resources/logoC.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 500px;
+}
+
+div.modal > div.container > div.section > h1{
+
+	background: transparent;
+	color: #000000;
+	font-size: xx-large;
+}
+
+div.modal > div.container > div.section > div.container > h1{
+
+	color: #808080;
+	font-family: "Betty Noir";
+	font-size: large;
+	font-weight: normal;
+	line-height: 20px;
+	margin: 0px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+
+div.modal > div.container > div.section > div.container{
+
+	background-color: rgba(255,255,255,0.7);
+	border: 1px solid #808080;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+	padding: 10px;
+	margin: 10px;
+	width: 91%;
+}
+
+div.modal > div.container > div.section > div.container > span{
+
+	font-size: small;
+	line-height: 20px;
+}
+
+div.modal > div.container > div.section > span.close{
+
+	cursor: default;
+	color: #A0A0A0;
+	float: right;
+	font-size: 25px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+div.modal > div.container > div.section > span.close:hover{
+
+	color: #808080;
+}
+
+div.container{
+
+	width: 800px;
+	overflow: auto;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+div.section{
+
+	width: 98%;
+	background: #EEEEEE;
+	border-radius: 15px;
+	box-shadow: 8px 8px 5px rgba(0, 0, 0, .3);
+	margin: 10px;
+	float: left;
+}
+
+div.section#about{
+
+	width: 32%;
+}
+
+div.section#featured{
+
+	width: 63%;
+}
+
+div.section#products{
+
+	height: 600px;
+}
+
+div.section#checkout{
+
+	height: 575px;
+	overflow: hidden;
+}
+
+div.section > h1{
+
+	background: linear-gradient(#4B3E48, #4B3E48, #372B35);
+	color: #FEFEFC;
+	font-size: larger;
+	font-family: "Betty Noir";
+	font-weight: normal;
+	text-align: center;
+	border: 2px solid #EEEEEE;
+	border-radius: 15px;
+	margin: 0px;
+	padding: 5px;
+}
+
+div.section > p{
+
+	margin: 10px;
+}
+
+div.section > ul.selectbar{
+
+	background: linear-gradient(#4B3E48, #4B3E48, #372B35);
+	height: 30px;
+	color: #EEEEEE;
+	border: 2px solid #FAFAFA;
+	border-radius: 18px;
+	margin: 0px;
+	list-style-type: none;
+}
+
+div.section > ul.selectbar > li{
+
+	float: left;
+	font-family: "Betty Noir";
+	font-weight: normal;
+	font-size: large;
+	line-height: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+div.section > ul.selectbar > li:hover{
+
+	background-color: #808080;
+}
+
+div.section > ul.selectbar > li#selected{
+
+	background-color: #635760;
+}
+
+div.section > div.container{
+
+	width: 99%;
+	height: 92%;
+	overflow: auto;
+	margin: auto;
+}
+
+div.product{
+
+	background-color: #FFFFFF;
+	border: 1px solid #808080;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+	padding: 10px;
+	margin: 10px;
+}
+
+div.product > img{
+
+	width: 175px;
+	height: 175px;
+	border: 1px solid #CCCCCC;
+	margin: 10px;
+	float: left;
+}
+
+div.product > div.title{
+
+	font-family: "Betty Noir";
+	font-size: xx-large;
+	font-weight: normal;
+	text-align: center;
+	margin: 10px;
+}
+
+div.product > div.id{
+
+	color: #CCCCCC;
+	font-size: small;
+	line-height: 0px;
+}
+
+div.product > div.description{
+
+	margin: 25px;
+}
+
+div.product > input.qnty{
+
+	color: #4AA5E3;
+	height: 40px;
+	width: 40px;
+	font-size: large;
+	text-align: center;
+	border: 1px solid #808080;
+	vertical-align: top;
+}
+
+div.product > div.price{
+
+	float: right;
+	display: inline-block;
+	font-size: xx-large;
+	line-height:15px;
+	margin-top: 10px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+div.product > div.price > span.stock{
+
+	font-size: small;
+}
+
+form{
+	float: left;
+	padding: 10px;
+}
+
+form#signup{
+
+	width: 59%;
+}
+
+form#signin{
+
+	width: 35%;
+}
+
+form > input#order{
+
+	background: url('/resources/order.png') no-repeat top left;
+	width: 250px;
+	height: 200px;
+	border: none;
+	position: relative;
+	top: -215px;
+	left: 500px;
+}
+
+form > input#order:hover{
+
+	background: url('/resources/order_hover.png') no-repeat top left;
+}
+
+form > div.section{
+
+	display: inline-block;
+	width: 95%;
+	background-color: #FFFFFF;
+	border: 1px solid #808080;
+	border-radius: 0px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+	padding: 10px;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+form#signin > div.section{
+
+	background-color: #909090;
+}
+
+form#signin > div.section > input{
+
+	width: 100%;
+	margin-bottom: 0px;
+	margin-top: 25px;
+}
+
+form#signin > div.section > input:hover{
+
+	background-color: #0d82d5;
+}
+
+form > div.section > h1{
+
+	background: transparent;
+	border: none;
+	font-family: "Betty Noir";
+	font-size: x-large;
+	text-align: center;
+	line-height: 20px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+form#signin > div.section > h1{
+
+	color: #FFFFFF;
+}
+
+form > div.section > div.container{
+
+	width: auto;
+	display: inline-block;
+	font-size: 11px;
+	margin: 15px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+form > div.section > div.container#pp{
+
+	display: none;
+}
+
+form > div.section > div.container > select{
+
+	margin-left: 20px;
+}
+
+form > div.section > div.container > img{
+
+	margin-right: 15px;
+	width: 45px;
+}
+
+form > div.section > div.container > textarea{
+
+	resize: none;
+}
+
+form > div.section > div.container > input#email{
+
+	width: 210px;
+}
+
+form > div.section > div.container > input#passw{
+
+	width: 170px;
+}
+
+form > div.section > div.container > input#passwrep{
+
+	width: 170px;
+}
+
+form > div.section > div.container > input#ccnum{
+
+	width: 100px; 
+}
+
+form > div.section > div.container > input#ccname{
+
+	width: 165px; 
+}
+
+form > div.section > div.container > input#ccsc{
+
+	width: 30px;
+}
+
+form > div.section > div.container > input#ppname{
+
+	width: 210px;
+}
+
+form#signin > div.section > div.container > input#email{
+
+	width:220px;
+}
+
+form#signin > div.section > div.container > input#password{
+
+	width:220px;
+}
+
+form > div.section > div.container > span.text{
+
+	display: inline-block;
+	font-size: small;
+	font-weight: lighter;
+	margin-right: 5px;
+}
+
+form#signin > div.section > div.container > span.text{
+
+	color: #FFFFFF;
+}
+
+form > div.section > div.container > span.subtext{
+
+	font-weight: lighter;
+}
+
+form#signin > div.section > div.container > span.subtext{
+
+	color: #FFFFFF;
+}
+
+form > div.section > div.container > span.error{
+
+	color: #FF0000;
+}
+
+footer{
+
+	color: #FEFEFC;
+	font-size: x-small;
+	text-align: center;
+	margin: 20px;
+	clear: both;
+}

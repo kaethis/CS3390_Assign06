@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<products>
+
+   <product category="branch">
+
+      <title>Standard</title>
+      <id>1000</id>
+
+      <description>A medium-sized, regular old branch.  Lightweight and sturdy,
+         this general purpose tree branch is also our most versatile!
+      </description>
+
+      <price>40.00</price>
+      <stock>3</stock>
+
+   </product>
+
+   <product category="branch">
+
+      <title>Heavy</title>
+      <id>1001</id>
+
+      <description>A heavy-duty tree branch that can withstand a beating!  This
+         industrial-grade branch shouldn't be taken lightly.
+      </description>
+
+      <price>85.00</price>
+      <stock>3</stock>
+
+   </product>
+
+   <product category="branch">
+
+      <title>Portable</title>
+      <id>1002</id>
+
+      <description>Looking for something a little more portable?  This mobile tree
+         branch offers a wide variety of options.  Our smallest model yet!
+      </description>
+
+      <price>70.00</price>
+      <stock>0</stock>
+
+   </product>
+
+</products>
